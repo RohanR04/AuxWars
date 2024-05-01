@@ -1,5 +1,3 @@
-# AuxWars
-
 # Aux Wars
 
 Aux Wars is an interactive web-based music battle game where players engage in musical face-offs by selecting songs from a randomly chosen artist's discography. The game leverages the vast library of the Spotify API, allowing players to discover and explore artists and their music in a competitive and fun format. Each game session is a dynamic battle of musical taste, strategy, and luck.
