@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RohanR04/AuxWars#readme",
   "dependencies": {
-    "axios": "^1.6.8"
+    "axios": "^1.6.8",
+    "socket.io": "^4.7.5"
   }
 }

@@ -1,5 +1,8 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const voteSchema = new Schema({
+    trackId: { type: Schema.Types.ObjectId, ref: 'Track' },
+    userId: { type: Schema.Types.ObjectId, ref: 'User' },
+    vote: { type: Number, default: 1 } // Assuming a simple +1 vote per click; extend as needed
+});
 
 const gameSessionSchema = new Schema({
     host: { type: Schema.Types.ObjectId, ref: 'User' },
@@ -9,19 +12,16 @@ const gameSessionSchema = new Schema({
     }],
     artist: {
         name: String,
-        spotifyArtistId: String // Spotify Artist ID for API integration
+        spotifyArtistId: String
     },
     tracks: [{
         title: String,
-        spotifyTrackId: String // Spotify Track ID for API integration
+        spotifyTrackId: String
     }],
-    votes: [{
-        trackId: { type: Schema.Types.ObjectId, ref: 'Track' },
-        voters: [{ type: Schema.Types.ObjectId, ref: 'User' }]
-    }],
+    votes: [voteSchema],
     status: { type: String, enum: ['waiting', 'active', 'completed'], default: 'waiting' }
 }, {
-    timestamps: true // Adds createdAt and updatedAt automatically
+    timestamps: true
 });
 
 const GameSession = mongoose.model('GameSession', gameSessionSchema);
