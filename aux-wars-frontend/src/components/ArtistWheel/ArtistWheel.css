@@ -1,1 +1,15 @@
-.artist-wheel { /* Styles for artist wheel */ }
+/* src/components/ArtistWheel/ArtistWheel.css */
+.artist-wheel {
+    padding: 20px;
+    text-align: center;
+}
+
+.artist-wheel h2 {
+    margin-bottom: 20px;
+}
+
+.artist-wheel button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

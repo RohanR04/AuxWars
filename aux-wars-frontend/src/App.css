@@ -1,38 +1,95 @@
+/* General body and app-wide settings */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  /* light gray background for a neutral look */
+  color: #333;
+  /* dark gray color for text for better readability */
+}
+
 .App {
   text-align: center;
+  /* Center aligning the content for simplicity */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Header styles if needed */
+.header {
+  background-color: #20232a;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
+/* Link styling */
+a {
   color: #61dafb;
+  /* React blue for links */
+  text-decoration: none;
+  /* No underline to keep it clean */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  text-decoration: underline;
+  /* Underline on hover for better interaction feedback */
+}
+
+/* Button styling - basic and can be used for navigation or actions */
+button {
+  background-color: #61dafb;
+  /* React blue for buttons */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4095c6;
+  /* Darker blue on hover */
+}
+
+/* Form input styling */
+input,
+select {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Utility classes for margins and padding */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+/* Specific component styles can go under classes named after the component */
+.dashboard,
+.game,
+.artist-wheel,
+.track-list,
+.vote {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  background-color: white;
+  /* White background for components */
 }
