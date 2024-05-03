@@ -1,0 +1,6 @@
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Add more styles as needed */
+}
